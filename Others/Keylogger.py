@@ -35,14 +35,10 @@ spaceBar = ' '
 while i < n:
     sound = input()
     if sound not in ['whack', 'bump', 'pop', 'dink', 'thumb']:
-        if shiftDown and capsDown:
-            out += dic[sound]
-        elif not shiftDown and not capsDown: #caps up but shift also up
-            out += dic[sound]
-        elif shiftDown and not capsDown: #caps up but shift down
+        if shiftDown ^ capsDown: #
             out += dic[sound].upper()
-        elif not shiftDown and capsDown: #caps down but shift up
-            out += dic[sound].upper()
+        else: 
+            out += dic[sound]
     else:
         if sound == 'whack':
             out += ' '
