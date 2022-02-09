@@ -11,7 +11,7 @@ children.remove(0)
 children.insert(0, 0) #insert 0 person at front
 curStart = getSum(children)
 maxHappiness = curStart
-curHappiness = curStart
+curHappiness = maxHappiness
 curIdx = 0 #index of 0 person
 while curIdx < len(children) - 1:
     if curHappiness > maxHappiness:
